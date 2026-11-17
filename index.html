@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VORLEN Digital Academy — Learn Today. Work Globally.</title>
+<meta name="description" content="VORLEN Digital Academy offers career-focused online training in medical billing & coding, AI-powered digital marketing and modern technology. Live online classes, practical projects, portfolio development.">
+<meta property="og:title" content="VORLEN Digital Academy — Learn Today. Work Globally.">
+<meta property="og:description" content="Career-focused online training in healthcare administration, artificial intelligence, digital marketing and modern technology.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vorlendigital.com/">
+<meta property="og:image" content="https://vorlendigital.com/vorlen-ecosystem.jpg">
+<link rel="icon" href="vorlen-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VORLEN corporate palette (brief section 2). Only these colours plus their tints/shades. */
+:root{
+  --navy:#162B4A; --navy-dark:#0E1D33; --navy-tint:#E9EDF3; --navy-soft:#C7D0DC;
+  --red:#C8102E; --red-dark:#9E0C24; --red-tint:#FCEDEF;
+  --green:#168447; --green-dark:#0F6636; --green-tint:#E9F6EE;
+  --white:#FFFFFF; --offwhite:#F8FAFC; --line:#E5E9EF; --gray-tint:#EEF2F6;
+  --text:#1B2430; --muted:#64748B;
+  --radius:12px; --radius-btn:8px;
+  --shadow:0 1px 3px rgba(22,43,74,.08),0 4px 14px rgba(22,43,74,.05);
+  --shadow-lg:0 2px 6px rgba(22,43,74,.08),0 12px 28px rgba(22,43,74,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);background:var(--white);line-height:1.65;overflow-x:hidden;font-size:16px}
+h1,h2,h3,h4{color:var(--navy);line-height:1.25;font-weight:700}
+img{max-width:100%;height:auto}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+.section-light{background:var(--offwhite)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.section-title{font-size:clamp(1.65rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+.section-sub{color:var(--muted);max-width:720px;font-size:1.05rem}
+.center{text-align:center}
+.center .section-sub{margin:0 auto}
+/* Buttons: restrained, slightly rounded, no glow */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:var(--radius-btn);font-weight:600;font-size:.98rem;border:1px solid transparent;cursor:pointer;transition:background .15s ease,border-color .15s ease,color .15s ease;text-decoration:none;font-family:inherit}
+.btn:hover{text-decoration:none}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-dark)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-dark)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-dark)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-white-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-white-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-sm{padding:10px 18px;font-size:.9rem}
+.btn-block{width:100%}
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:6px;font-size:.78rem;font-weight:600;letter-spacing:.02em}
+.badge-active{background:var(--green-tint);color:var(--green-dark)}
+.badge-open{background:var(--red-tint);color:var(--red-dark)}
+.badge-soon{background:var(--gray-tint);color:var(--muted)}
+.badge-dev{background:var(--navy-tint);color:var(--navy)}
+/* Header: navy navigation */
+header{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:3px solid var(--red)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand:hover{text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.brand-name{font-weight:800;font-size:1.22rem;color:#fff;letter-spacing:.05em;line-height:1}
+.brand-tag{font-size:.64rem;letter-spacing:.22em;color:var(--navy-soft);font-weight:600;text-transform:uppercase}
+nav.main-nav{display:flex;gap:2px}
+nav.main-nav a{color:rgba(255,255,255,.88);font-weight:500;font-size:.9rem;padding:8px 10px;border-radius:6px;white-space:nowrap}
+nav.main-nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
+.nav-actions{display:flex;gap:10px;align-items:center;flex:none}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:8px 12px;font-size:1.1rem;cursor:pointer;color:#fff}
+.mobile-menu{display:none;border-top:1px solid rgba(255,255,255,.15);padding:8px 20px 16px;background:var(--navy)}
+.mobile-menu a{display:block;padding:11px 6px;color:#fff;font-weight:500;border-bottom:1px solid rgba(255,255,255,.12)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+/* Hero */
+.hero{padding:72px 0 76px;background:var(--white);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(2.05rem,4.4vw,3.05rem);font-weight:800;letter-spacing:-.015em;margin:6px 0 18px}
+.hero h1 .accent{color:var(--red)}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:560px;margin-bottom:24px}
+.tagline-box{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:8px;padding:11px 18px;font-weight:600;color:var(--navy);margin-bottom:28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero-points{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.92rem;font-weight:500}
+.hero-points span::before{content:"✓ ";color:var(--green);font-weight:700}
+.hero-panel{background:var(--navy);color:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-lg)}
+.hero-panel img.logo-mark{width:84px;height:84px;border-radius:50%;object-fit:cover;margin-bottom:16px}
+.hero-panel h3{color:#fff;font-size:1.3rem;margin-bottom:8px}
+.hero-panel p{color:var(--navy-soft);font-size:.95rem;margin-bottom:16px}
+.hero-panel ul{list-style:none}
+.hero-panel li{padding:11px 0;border-top:1px solid rgba(255,255,255,.16);font-weight:600;font-size:.95rem}
+.hero-panel li span{color:var(--navy-soft);font-weight:400}
+/* Cards */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.card h3{font-size:1.22rem;margin:0 0 8px}
+.card p{color:var(--muted);font-size:.96rem}
+.accent-bar{width:34px;height:4px;background:var(--red);border-radius:2px;margin-bottom:16px}
+/* Course cards */
+.course-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.course-top{padding:26px 28px 0}
+.course-top h3{font-size:1.42rem;margin:12px 0 8px}
+.course-meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.89rem;font-weight:500;margin-bottom:14px}
+.course-meta span+span::before{content:"·";margin-right:8px;color:var(--muted)}
+.course-top p{color:var(--muted)}
+.topic-list{list-style:none;padding:18px 28px;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.topic-list li{font-size:.93rem;font-weight:500;color:var(--text);padding-left:22px;position:relative}
+.topic-list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+.course-foot{margin-top:auto;padding:20px 28px 26px;border-top:1px solid var(--line);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.course-foot .wa-link{font-size:.9rem;font-weight:600;color:var(--green-dark)}
+.course-foot .note{font-size:.87rem;color:var(--muted);width:100%}
+/* Catalog */
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 8px}
+.filter-btn{padding:10px 20px;border-radius:var(--radius-btn);border:1px solid var(--line);background:#fff;font-weight:600;font-size:.9rem;color:var(--navy);cursor:pointer;font-family:inherit}
+.filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.catalog-item{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.catalog-item h4{font-size:1.05rem}
+.catalog-item .cat{font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.catalog-item .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;flex-wrap:wrap}
+.fine-note{margin-top:22px;color:var(--muted);font-size:.9rem;background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:8px;padding:14px 18px}
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:32px}
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 14px;text-align:center}
+.step .num{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:.95rem}
+.step h4{font-size:.97rem;margin-bottom:6px}
+.step p{font-size:.86rem;color:var(--muted)}
+/* Ecosystem */
+.ecosystem-frame{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow-lg);margin-top:32px}
+.ecosystem-frame img{width:100%;height:auto;display:block;border-radius:8px;object-fit:contain;cursor:zoom-in}
+.ecosystem-note{max-width:760px;margin:24px auto 0;color:var(--muted);font-size:1.02rem}
+.ecosystem-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+/* Ventures */
+.venture-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.venture{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.venture.featured{border:1px solid var(--red);box-shadow:var(--shadow)}
+.venture h3{font-size:1.14rem;margin:10px 0 4px}
+.venture .tagline{color:var(--muted);font-size:.9rem}
+.venture p{color:var(--muted);font-size:.92rem;margin-top:8px}
+/* Interest cards */
+.interest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.interest-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}
+.interest-card h4{font-size:1.05rem}
+.interest-card p{color:var(--muted);font-size:.88rem;flex:1}
+/* Forms */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);max-width:640px;margin:0 auto}
+.form-card.wide{max-width:760px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:600;font-size:.9rem;color:var(--navy);margin-bottom:6px}
+label .req{color:var(--red);font-weight:700}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-btn);font:inherit;font-size:.95rem;color:var(--text);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,43,74,.14)}
+input.input-error,select.input-error,textarea.input-error{border-color:var(--red)}
+input.input-error:focus,select.input-error:focus,textarea.input-error:focus{box-shadow:0 0 0 3px rgba(200,16,46,.14)}
+textarea{resize:vertical;min-height:90px}
+.field{margin-bottom:14px}
+.fieldset-heading{font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 14px;padding-top:18px;border-top:1px solid var(--line)}
+.fieldset-heading:first-child{margin-top:0;padding-top:0;border-top:none}
+.error-text{display:none;color:var(--red-dark);font-size:.84rem;margin-top:5px;font-weight:500}
+.error-text.show{display:block}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--muted);margin:4px 0 12px;cursor:pointer}
+.consent input{width:18px;height:18px;margin-top:2px;flex:none;accent-color:var(--navy);cursor:pointer}
+.consent.input-error{color:var(--red-dark)}
+.privacy-note{font-size:.85rem;color:var(--muted);background:var(--offwhite);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:14px}
+.form-note{font-size:.88rem;color:var(--muted);margin-top:12px;text-align:center}
+.notice-box{display:none;background:var(--navy-tint);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:8px;padding:13px 16px;font-size:.9rem;color:var(--navy);margin-bottom:16px}
+.notice-box.show{display:block}
+.hp{position:absolute !important;left:-9999px !important;top:auto;width:1px;height:1px;overflow:hidden}
+/* Submit states */
+.spinner{display:none;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;flex:none}
+.btn.loading .spinner{display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .spinner{animation:none}
+  *{transition:none !important}
+}
+/* Success / error views inside forms and modals */
+.form-result{display:none;text-align:center;padding:12px 4px}
+.form-result.show{display:block}
+.success-icon{width:56px;height:56px;border-radius:50%;background:var(--green-tint);color:var(--green-dark);display:flex;align-items:center;justify-content:center;font-size:1.7rem;font-weight:700;margin:0 auto 16px}
+.error-icon{width:56px;height:56px;border-radius:50%;background:var(--red-tint);color:var(--red-dark);display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;margin:0 auto 16px}
+.form-result h3{font-size:1.35rem;margin-bottom:10px}
+.form-result p{color:var(--muted);font-size:.96rem;max-width:480px;margin:0 auto 8px}
+.result-details{text-align:left;background:var(--offwhite);border:1px solid var(--line);border-radius:10px;padding:16px 20px;max-width:420px;margin:18px auto;font-size:.94rem}
+.result-details div{display:flex;justify-content:space-between;gap:16px;padding:5px 0}
+.result-details dt{color:var(--muted)}
+.result-details dd{font-weight:600;color:var(--navy);text-align:right}
+.result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+/* Modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(14,27,48,.62);display:none;align-items:flex-start;justify-content:center;z-index:200;padding:24px 16px;overflow-y:auto}
+.modal-backdrop.open{display:flex}
+.modal{background:#fff;border-radius:var(--radius);max-width:620px;width:100%;padding:30px;position:relative;box-shadow:var(--shadow-lg);margin:auto 0}
+.modal.narrow{max-width:560px}
+.modal h3{font-size:1.35rem;margin-bottom:6px;padding-right:40px}
+.modal .sub{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+.modal-close{position:absolute;top:16px;right:16px;background:var(--offwhite);border:1px solid var(--line);width:36px;height:36px;border-radius:50%;font-size:1rem;cursor:pointer;color:var(--navy);line-height:1}
+.modal-close:hover{background:var(--gray-tint)}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(10,18,30,.92);display:none;align-items:center;justify-content:center;z-index:300;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:88vh;object-fit:contain;border-radius:8px}
+.lightbox-close{position:absolute;top:18px;right:22px;background:#fff;border:none;width:42px;height:42px;border-radius:50%;font-size:1.15rem;cursor:pointer;color:var(--navy);font-weight:700}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.contact-info .big-wa{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:20px 0;box-shadow:var(--shadow)}
+.contact-info .big-wa .wa-icon{width:48px;height:48px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.35rem;flex:none;font-weight:700}
+.contact-info .big-wa b{font-size:1.18rem;color:var(--navy);display:block}
+.contact-info .big-wa span{color:var(--muted);font-size:.88rem}
+.social-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.social-row a{display:inline-flex;padding:10px 18px;border-radius:var(--radius-btn);border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:600;font-size:.9rem}
+.social-row a:hover{border-color:var(--navy);text-decoration:none}
+.divider-label{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.86rem;font-weight:600;margin:22px 0 16px}
+.divider-label::before,.divider-label::after{content:"";flex:1;height:1px;background:var(--line)}
+/* Footer */
+footer{background:var(--navy);color:var(--navy-soft);padding:56px 0 28px;border-top:3px solid var(--red)}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+footer h4{color:#fff;font-size:1rem;margin-bottom:14px}
+footer a{color:var(--navy-soft);display:block;padding:5px 0;font-size:.93rem}
+footer a:hover{color:#fff}
+.footer-brand img{width:58px;height:58px;border-radius:50%;object-fit:cover;margin-bottom:12px}
+.footer-brand .fname{font-weight:800;color:#fff;font-size:1.3rem;letter-spacing:.05em}
+.footer-brand .ftag{color:var(--navy-soft);font-size:.85rem;margin:6px 0 12px}
+.footer-brand .values{color:#fff;font-weight:600;font-size:.88rem;letter-spacing:.05em}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.86rem;color:var(--navy-soft)}
+/* Responsive */
+@media (max-width:980px){
+  nav.main-nav{display:none}
+  .menu-btn{display:block}
+  .nav-actions .btn-white-outline{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .grid-3,.grid-4,.catalog-grid,.venture-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .interest-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  section{padding:56px 0}
+  .grid-2,.grid-3,.grid-4,.catalog-grid,.venture-grid,.interest-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .topic-list{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .brand-tag{display:none}
+  .modal{padding:24px 20px}
+  .modal-backdrop{padding:12px 10px}
+  .nav-actions .btn-sm{padding:9px 13px;font-size:.85rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="VORLEN Digital Academy — home">
+      <img src="vorlen-logo.jpg" alt="VORLEN logo" width="44" height="44">
+      <span>
+        <span class="brand-name">VORLEN</span><br>
+        <span class="brand-tag">Digital Academy</span>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About VORLEN</a>
+      <a href="#academy">Digital Academy</a>
+      <a href="#courses">Courses</a>
+      <a href="#services">Educational Services</a>
+      <a href="#collaborations">Collaborations</a>
+      <a href="#vision">Our Vision</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-white-outline btn-sm" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20VORLEN%20Digital%20Academy%20courses." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="btn btn-red btn-sm" type="button" data-register="">Apply for Admission</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About VORLEN</a>
+    <a href="#academy">Digital Academy</a>
+    <a href="#courses">Courses</a>
+    <a href="#services">Educational Services</a>
+    <a href="#collaborations">Collaborations</a>
+    <a href="#vision">Our Vision</a>
+    <a href="#contact">Contact</a>
+    <a href="#courses"><strong>Explore Courses →</strong></a>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">VORLEN Digital Academy</span>
+      <h1>Practical Skills. <span class="accent">Real Projects.</span> Future Opportunities.</h1>
+      <p class="lead">Career-focused online education in healthcare administration, artificial intelligence, digital marketing, and modern technology.</p>
+      <div class="tagline-box">Learn Today. Work Globally.</div>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#courses">Explore Courses</a>
+        <button class="btn btn-navy" type="button" data-register="">Apply for Admission</button>
+      </div>
+      <div class="hero-points">
+        <span>Live online classes</span>
+        <span>Practical projects</span>
+        <span>100% online</span>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <img class="logo-mark" src="vorlen-logo-transparent.png" alt="VORLEN Digital Academy emblem">
+      <h3>One Brand. Multiple Possibilities.</h3>
+      <p>VORLEN Digital Academy is the active educational platform of the VORLEN brand — practical training, taught live online.</p>
+      <ul>
+        <li>Medical Billing &amp; Coding — <span>Admissions open, Batch 02</span></li>
+        <li>AI-Powered Digital Marketing — <span>Batch 1 in progress</span></li>
+        <li>More courses — <span>opening based on student demand</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 1b. ABOUT / PARENT BRAND -->
+<section id="about" style="padding-top:64px">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">About VORLEN</span>
+      <h2 class="section-title">More Than an Academy. A Growing Vision.</h2>
+      <p class="section-sub">VORLEN is a growing brand connecting people with education, digital skills, technology, and emerging business opportunities. VORLEN Digital Academy is one of its active initiatives, focused on accessible and practical professional education.</p>
+    </div>
+    <div class="grid-2" style="margin-top:36px">
+      <div class="card">
+        <span class="badge badge-active">Active</span>
+        <h3 style="margin-top:12px">VORLEN Digital Academy</h3>
+        <p>Career-focused education, instructor-led online courses, healthcare administration training, AI and digital skills.</p>
+        <p style="margin-top:18px"><a class="btn btn-red btn-sm" href="#academy">Explore Academy</a></p>
+      </div>
+      <div class="card">
+        <span class="badge badge-dev">Open for discussion</span>
+        <h3 style="margin-top:12px">VORLEN Educational Services</h3>
+        <p>Educational consulting, institutional support, academic collaboration, program development, and technology-enabled educational solutions.</p>
+        <p style="margin-top:18px"><a class="btn btn-navy btn-sm" href="#services">Explore Services</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. FEATURED COURSES -->
+<section class="section-light" id="academy">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Digital Academy — Featured Courses</span>
+      <h2 class="section-title">Courses That Teach Real Work</h2>
+      <p class="section-sub">Two career-focused programs, taught live online with practical work at the centre. For fee details, message us on WhatsApp — our admissions team will guide you.</p>
+    </div>
+    <div class="grid-2" style="margin-top:32px">
+      <article class="course-card">
+        <div class="course-top">
+          <span class="badge badge-open">Admissions Open — Batch 02</span>
+          <h3>Medical Billing &amp; Coding</h3>
+          <div class="course-meta"><span>2 Months</span><span>Live Online Classes</span><span>Matric &amp; Above</span></div>
+          <p>Learn how US healthcare billing works — from patient registration and insurance checks to claims, denials and payments — with real-time practical workflows.</p>
+        </div>
+        <ul class="topic-list">
+          <li>US Healthcare Billing</li>
+          <li>Insurance Verification</li>
+          <li>Medical Claims</li>
+          <li>Revenue Cycle Management</li>
+          <li>Payment Follow-Up</li>
+          <li>Practical Workflows</li>
+        </ul>
+        <div class="course-foot">
+          <button class="btn btn-red btn-sm" type="button" data-register="Medical Billing &amp; Coding">Apply Now</button>
+          <a class="wa-link" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20course%20information%20for%3A%20Medical%20Billing%20%26%20Coding." target="_blank" rel="noopener">Ask about this course on WhatsApp</a>
+          <span class="note">Includes interview prep &amp; certification guidance</span>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-top">
+          <span class="badge badge-active">Active — Batch 1 in Progress</span>
+          <h3>AI-Powered Digital Marketing &amp; Content Creation</h3>
+          <div class="course-meta"><span>8 Weeks</span><span>Live Online Training</span><span>Intermediate &amp; Above</span></div>
+          <p>From your first AI prompt to a complete client-ready portfolio — content, video, advertising and lead generation, built through real project work.</p>
+        </div>
+        <ul class="topic-list">
+          <li>AI Content Creation</li>
+          <li>Canva Designing</li>
+          <li>Short Video Production</li>
+          <li>Meta Ads</li>
+          <li>WhatsApp Lead Generation</li>
+          <li>Customer Relationship Management (CRM)</li>
+          <li>Real Project Work</li>
+          <li>Portfolio Development</li>
+        </ul>
+        <div class="course-foot">
+          <button class="btn btn-red btn-sm" type="button" data-register="AI-Powered Digital Marketing &amp; Content Creation">Apply Now</button>
+          <a class="wa-link" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20course%20information%20for%3A%20AI-Powered%20Digital%20Marketing%20%26%20Content%20Creation." target="_blank" rel="noopener">Ask about this course on WhatsApp</a>
+          <span class="note">Graduate with a portfolio of real work</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 2b. COURSE CATALOG -->
+<section id="courses">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Complete Course Catalog</span>
+      <h2 class="section-title">Program Areas at VORLEN Digital Academy</h2>
+      <p class="section-sub">These are our program areas. Only the courses marked Active or Admissions Open are currently running. Other programs open based on student demand — register for a program and our admissions team will contact you when a new batch opens, or tell us what you want to learn in the feedback section below.</p>
+    </div>
+    <div class="filter-row" role="group" aria-label="Filter courses by category">
+      <button class="filter-btn active" type="button" data-filter="all">All Programs</button>
+      <button class="filter-btn" type="button" data-filter="medical">Medical &amp; Healthcare</button>
+      <button class="filter-btn" type="button" data-filter="ai">AI &amp; Future Skills</button>
+      <button class="filter-btn" type="button" data-filter="it">IT, Marketing &amp; E-Commerce</button>
+    </div>
+    <div class="catalog-grid" id="catalogGrid">
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Medical Billing &amp; Coding</h4><div class="row"><span class="badge badge-open">Admissions Open — Batch 02</span><button class="btn btn-red btn-sm" type="button" data-register="Medical Billing &amp; Coding">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Medical Coding</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Medical Coding">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Medical Virtual Assistant</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Medical Virtual Assistant">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Dental Billing</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Dental Billing">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Behavioral Health Billing</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Behavioral Health Billing">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="medical"><span class="cat">Medical &amp; Healthcare</span><h4>Medical Credentialing</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Medical Credentialing">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>AI-Powered Digital Marketing</h4><div class="row"><span class="badge badge-active">Active — Batch 1 in Progress</span><button class="btn btn-red btn-sm" type="button" data-register="AI-Powered Digital Marketing &amp; Content Creation">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>AI Automation</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="AI Automation">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>Prompt Engineering</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Prompt Engineering">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>AI Video &amp; Content Creation</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="AI Video &amp; Content Creation">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>AI Agents Development</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="AI Agents Development">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>AI Chatbots &amp; Voice Agents</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="AI Chatbots &amp; Voice Agents">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>No-Code AI App Building</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="No-Code AI App Building">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="ai"><span class="cat">AI &amp; Future Skills</span><h4>Machine Learning Basics</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Machine Learning Basics">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Python Programming</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Python Programming">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Web Development</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Web Development">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Data Analytics</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Data Analytics">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Cybersecurity Basics</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Cybersecurity Basics">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Graphic Designing</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Graphic Designing">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>SEO</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="SEO">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>Meta &amp; Google Ads</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="Meta &amp; Google Ads">Apply Now</button></div></div>
+      <div class="catalog-item" data-cat="it"><span class="cat">IT, Marketing &amp; E-Commerce</span><h4>E-Commerce Skills</h4><div class="row"><span class="badge badge-soon">Interest Open</span><button class="btn btn-outline btn-sm" type="button" data-register="E-Commerce Skills">Apply Now</button></div></div>
+    </div>
+    <p class="fine-note">Honesty note: program areas marked “Interest Open” are not currently enrolling. Registrations for those programs are recorded, and our admissions team will contact you when a new batch opens. We launch new batches when enough students show genuine interest.</p>
+  </div>
+</section>
+
+<!-- 3. WHY VORLEN -->
+<section class="section-light" id="why">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Why Learn With VORLEN</span>
+      <h2 class="section-title">Practical Learning, Honest Guidance</h2>
+    </div>
+    <div class="grid-3" style="margin-top:32px">
+      <div class="card"><div class="accent-bar"></div><h3>Live Instructor-Led Classes</h3><p>Real teachers, real sessions — ask questions and get answers in class, not just recorded videos.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Practical Project Work</h3><p>Every course is built around doing the actual work: real workflows, real tools, real assignments.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>A Portfolio You Can Show</h3><p>Graduate with completed work you can present to clients and employers — not just a certificate.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Guidance Beyond the Classroom</h3><p>On selected courses: interview preparation and certification guidance to help you take the next step.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>100% Online, From Home</h3><p>Join live classes from anywhere in Pakistan. All you need is a device and an internet connection.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Direct WhatsApp Support</h3><p>Questions about admission, classes or courses? Message us on WhatsApp and get a direct answer.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PRACTICAL LEARNING AND REAL PROJECTS -->
+<section id="experience">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Real-World Learning Experience</span>
+      <h2 class="section-title">Learn. Practice. Build.</h2>
+      <p class="section-sub">A clear training pathway — from your first session to work you can show with confidence.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Select Your Course</h4><p>Choose the program that fits your goal.</p></div>
+      <div class="step"><div class="num">2</div><h4>Attend Live Sessions</h4><p>Join instructor-led online classes.</p></div>
+      <div class="step"><div class="num">3</div><h4>Learn Practical Tools</h4><p>Work with the tools used in real jobs.</p></div>
+      <div class="step"><div class="num">4</div><h4>Complete Assignments</h4><p>Apply each lesson with guided tasks.</p></div>
+      <div class="step"><div class="num">5</div><h4>Work on Projects</h4><p>Build real project work, step by step.</p></div>
+      <div class="step"><div class="num">6</div><h4>Develop Your Portfolio</h4><p>Finish with work you can present.</p></div>
+    </div>
+    <div class="card" style="margin-top:28px">
+      <h3 style="margin-top:0">Practical work in the AI Digital Marketing course</h3>
+      <p>Students practise across social media content, marketing campaign design, lead generation, WhatsApp Business, CRM, and reporting and analysis — building a portfolio of real deliverables as they learn. Tools and platforms are introduced during live sessions; this website does not host a student dashboard or LMS.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. UPCOMING COURSES AND FEEDBACK -->
+<section class="section-light" id="feedback">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Upcoming Courses — Your Feedback Matters</span>
+      <h2 class="section-title">What Should We Teach Next?</h2>
+      <p class="section-sub">Help us shape the next generation of practical courses at VORLEN Digital Academy. Tell us what you want to learn — new batches open where genuine demand exists.</p>
+    </div>
+    <div class="interest-grid">
+      <div class="interest-card"><h4>AI Automation</h4><p>Automate real business workflows with modern AI tools.</p><button class="btn btn-outline btn-sm" type="button" data-interest="AI Automation">I'm Interested</button></div>
+      <div class="interest-card"><h4>Medical Virtual Assistant</h4><p>Remote admin support for US healthcare practices.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Medical Virtual Assistant">I'm Interested</button></div>
+      <div class="interest-card"><h4>Advanced Medical Coding</h4><p>Deeper coding skills for healthcare claims work.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Advanced Medical Coding">I'm Interested</button></div>
+      <div class="interest-card"><h4>AI Video Creation</h4><p>Short-form video with AI tools, from idea to publish.</p><button class="btn btn-outline btn-sm" type="button" data-interest="AI Video Creation">I'm Interested</button></div>
+      <div class="interest-card"><h4>Python &amp; Data Analytics</h4><p>Programming foundations and working with real data.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Python &amp; Data Analytics">I'm Interested</button></div>
+      <div class="interest-card"><h4>Web Development</h4><p>Build real websites, from first page to live deployment.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Web Development">I'm Interested</button></div>
+      <div class="interest-card"><h4>Graphic Design</h4><p>Design skills for social media, brands and clients.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Graphic Designing">I'm Interested</button></div>
+      <div class="interest-card"><h4>Digital Marketing &amp; CRM</h4><p>Campaigns, leads and customer relationships, end to end.</p><button class="btn btn-outline btn-sm" type="button" data-interest="Digital Marketing &amp; CRM">I'm Interested</button></div>
+    </div>
+    <div class="center" style="margin-top:26px">
+      <button class="btn btn-navy" type="button" id="suggestCourseBtn">Suggest a New Course</button>
+      <p class="form-note">Interest submissions are saved in our course-interest log and emailed to our admissions team. Your details are used only to follow up on your course interest. You can also <a href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20am%20interested%20in%20upcoming%20courses%20at%20VORLEN%20Digital%20Academy.%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">message us on WhatsApp about upcoming courses</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. EDUCATIONAL SERVICES -->
+<section id="services">
+  <div class="container">
+    <div>
+      <span class="eyebrow">VORLEN Educational Services</span>
+      <h2 class="section-title">Supporting Institutions. Enabling Better Learning.</h2>
+      <p class="section-sub">VORLEN Educational Services works with schools, colleges and training institutions through practical, technology-enabled support. Every engagement is discussed and agreed individually — we only announce a partnership once it is confirmed.</p>
+    </div>
+    <div class="grid-4" style="margin-top:32px">
+      <div class="card"><div class="accent-bar"></div><h3>Educational Consulting</h3><p>Practical advice for institutions building or improving training programs.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Academic Program Planning</h3><p>Help structuring skill-focused courses and learning pathways.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Institutional Collaboration</h3><p>Joint training initiatives, agreed step by step with each partner.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Digital Learning Solutions</h3><p>Online delivery setups for institutions moving toward digital learning.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Learning Management Systems</h3><p>Guidance on organizing courses, materials and student progress online.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Admissions &amp; Academic Process Support</h3><p>Cleaner inquiry, admission and record processes for growing institutions.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>IT &amp; Digital Transformation</h3><p>Practical technology steps for schools and colleges going digital.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Faculty Development Support</h3><p>Training support to help teachers use modern digital tools with confidence.</p></div>
+    </div>
+    <p class="fine-note">VORLEN does not claim university affiliation, registration, recognition or government approval. Any formal arrangement is confirmed in writing before it is described publicly.</p>
+    <div class="center" style="margin-top:26px">
+      <a class="btn btn-navy" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20discuss%20an%20educational%20collaboration%20with%20VORLEN." target="_blank" rel="noopener">Discuss an Educational Collaboration</a>
+      <p class="form-note">For a formal written inquiry, use the <a href="#collabForm">collaboration inquiry form</a> below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. COLLABORATIONS AND PARTNERSHIPS -->
+<section class="section-light" id="collaborations">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Collaborations &amp; Partnerships</span>
+      <h2 class="section-title">Working Together for Better Education</h2>
+      <p class="section-sub">We welcome conversations with institutions, trainers and organizations that share our focus on practical skills. Partnerships are announced only once they are agreed — nothing here describes a signed agreement.</p>
+    </div>
+    <div class="grid-3" style="margin-top:32px">
+      <div class="card"><div class="accent-bar"></div><h3>Joint Training Programs</h3><p>Skill courses designed and delivered together with partner institutions.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Professional Skills Courses</h3><p>Short, practical programs for students and working professionals.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Instructor-Led Workshops</h3><p>Live workshops on digital skills, AI tools and healthcare administration.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Digital Learning Solutions</h3><p>Online learning setups for institutions expanding their reach.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Institutional Education Services</h3><p>Admissions, academic and digital-process support for education providers.</p></div>
+      <div class="card"><div class="accent-bar"></div><h3>Student Skill Development Initiatives</h3><p>Programs that prepare students for real work, freelancing and further study.</p></div>
+    </div>
+
+    <div class="form-card wide" id="collabForm" style="margin-top:36px">
+      <div id="collabFormWrap">
+        <h3 style="margin-bottom:6px">Collaboration Inquiry</h3>
+        <p style="color:var(--muted);font-size:.92rem;margin-bottom:20px">For schools, colleges, institutes and potential partners. Your inquiry is saved in our collaboration log and emailed to our team.</p>
+        <form id="collabInquiryForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="kPerson">Contact Person <span class="req">*</span></label><input id="kPerson" name="contactPerson" type="text" required autocomplete="name" placeholder="Your full name"><span class="error-text" id="kPersonError"></span></div>
+            <div class="field"><label for="kOrg">Organization Name <span class="req">*</span></label><input id="kOrg" name="organization" type="text" required autocomplete="organization" placeholder="School / college / institute name"><span class="error-text" id="kOrgError"></span></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="kEmail">Email Address <span class="req">*</span></label><input id="kEmail" name="email" type="email" required autocomplete="email" placeholder="you@organization.com"><span class="error-text" id="kEmailError"></span></div>
+            <div class="field"><label for="kPhone">Phone / WhatsApp</label><input id="kPhone" name="phone" type="tel" autocomplete="tel" placeholder="03xx-xxxxxxx (optional)"><span class="error-text" id="kPhoneError"></span></div>
+          </div>
+          <div class="field"><label for="kType">Type of Collaboration <span class="req">*</span></label>
+            <select id="kType" name="collabType" required>
+              <option value="">Select a type</option>
+              <option>Joint Training Program</option>
+              <option>Institutional Partnership</option>
+              <option>Workshop / Training</option>
+              <option>Digital Learning Solution</option>
+              <option>Other</option>
+            </select><span class="error-text" id="kTypeError"></span>
+          </div>
+          <div class="field"><label for="kMsg">Message <span class="req">*</span></label><textarea id="kMsg" name="message" required placeholder="Tell us about your institution and what you would like to collaborate on."></textarea><span class="error-text" id="kMsgError"></span></div>
+          <div class="hp" aria-hidden="true"><label for="kWebsite">Leave this field empty</label><input id="kWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          <p class="privacy-note">Your inquiry is used only to respond to your collaboration request. See our <a href="#privacy">privacy notice</a>.</p>
+          <button class="btn btn-red btn-block" type="submit" id="collabSubmit"><span class="spinner" aria-hidden="true"></span><span class="btn-label">Send Collaboration Inquiry</span></button>
+          <p class="form-note">Prefer to talk first? <a href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20discuss%20a%20collaboration%20with%20VORLEN%20Educational%20Services." target="_blank" rel="noopener">Discuss a collaboration on WhatsApp</a>.</p>
+        </form>
+      </div>
+      <div class="form-result" id="collabSuccess" role="status">
+        <div class="success-icon">✓</div>
+        <h3>Inquiry Submitted Successfully</h3>
+        <p>Thank you for your collaboration inquiry. Our team will review it and contact you regarding the next steps.</p>
+        <dl class="result-details">
+          <div><dt>Reference ID</dt><dd id="collabSuccessId">—</dd></div>
+          <div><dt>Organization</dt><dd id="collabSuccessOrg">—</dd></div>
+          <div><dt>Type</dt><dd id="collabSuccessType">—</dd></div>
+        </dl>
+        <div class="result-actions">
+          <a class="btn btn-outline" href="#collaborations" id="collabBackBtn">Back to Collaborations</a>
+          <a class="btn btn-green" href="https://wa.me/923715969140" target="_blank" rel="noopener" id="collabWaBtn">Contact on WhatsApp</a>
+        </div>
+      </div>
+      <div class="form-result" id="collabError" role="alert">
+        <div class="error-icon">!</div>
+        <h3>Submission Failed</h3>
+        <p>Your inquiry could not be sent. Please check your internet connection and try again — or contact us directly on WhatsApp.</p>
+        <div class="result-actions">
+          <button class="btn btn-red" type="button" id="collabRetryBtn">Try Again</button>
+          <a class="btn btn-green" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20discuss%20a%20collaboration%20with%20VORLEN%20Educational%20Services." target="_blank" rel="noopener">Contact on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. VORLEN BRAND ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">The VORLEN Brand</span>
+      <h2 class="section-title">Discover the VORLEN Ecosystem</h2>
+      <p class="section-sub">One Brand. Multiple Possibilities.</p>
+    </div>
+    <div class="ecosystem-frame">
+      <img src="vorlen-ecosystem.jpg" alt="The VORLEN brand ecosystem: VORLEN Store, VORLEN Fashion, VORLEN Education, VORLEN Digital Academy, VORLEN Healthcare, VORLEN Technologies, VORLEN Creative, VORLEN Custom Studio and VORLEN Opportunities — One Brand. Multiple Possibilities." loading="lazy" id="ecosystemImg" title="Click to view enlarged">
+    </div>
+    <p class="ecosystem-note center">VORLEN is building an ecosystem of learning, technology, business, and creative opportunities. Our Digital Academy is currently at the forefront of this journey, while additional ventures are being developed for the future.</p>
+    <div class="ecosystem-cta">
+      <a class="btn btn-red" href="#academy">Explore Digital Academy</a>
+      <a class="btn btn-outline" href="#vision">Discover Our Vision</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8b. FUTURE VENTURES -->
+<section class="section-light" id="vision">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Our Vision</span>
+      <h2 class="section-title">The Future of VORLEN</h2>
+      <p class="section-sub">We are exploring new opportunities across multiple industries as part of our long-term vision. Only VORLEN Digital Academy is currently active — the divisions below show where the brand is heading.</p>
+    </div>
+    <div class="venture-grid">
+      <div class="venture featured"><span class="badge badge-active">Active</span><h3>VORLEN Digital Academy</h3><div class="tagline">Skills for a Global Future.</div><p>Career-focused online training — our active educational platform, enrolling students today.</p></div>
+      <div class="venture"><span class="badge badge-dev">In Development</span><h3>VORLEN Store</h3><div class="tagline">More Than a Store.</div><p>Shopping and lifestyle — being developed as a future VORLEN venture.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Fashion</h3><div class="tagline">Style for Every Story.</div><p>Clothing and lifestyle — part of the long-term VORLEN vision.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Education</h3><div class="tagline">Learn Today. Lead Tomorrow.</div><p>Education and training programs — being shaped for the future.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Healthcare</h3><div class="tagline">Care for a Healthier Tomorrow.</div><p>Healthcare services — a future direction for the VORLEN brand.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Technologies</h3><div class="tagline">Ideas into Impact.</div><p>IT, software and AI solutions — part of the long-term vision.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Creative</h3><div class="tagline">Brands with Purpose.</div><p>Branding and marketing — a future creative venture.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Custom Studio</h3><div class="tagline">Your Design, Our Print.</div><p>Custom printing and merchandise — being explored for the future.</p></div>
+      <div class="venture"><span class="badge badge-soon">Future Vision</span><h3>VORLEN Opportunities</h3><div class="tagline">People to Opportunities.</div><p>Career development — connecting people to opportunities, as the brand grows.</p></div>
+    </div>
+    <p class="fine-note">These divisions represent our direction, not operating companies. We do not present future ventures as active businesses, and no separate websites or purchase options exist for them yet.</p>
+  </div>
+</section>
+
+<!-- 9. CONTACT AND ADMISSIONS -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Contact &amp; Admissions</span>
+        <h2 class="section-title">Your Learning Journey Starts Here.</h2>
+        <p class="section-sub">Have a question about our courses, training, or educational services? Our team is here to guide you.</p>
+        <div class="big-wa">
+          <span class="wa-icon">✆</span>
+          <span><b>WhatsApp: 0371-5969140</b><span>Tap to start a conversation with admissions.</span></span>
+        </div>
+        <p><a class="btn btn-green" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20would%20like%20to%20know%20more%20about%20VORLEN%20Digital%20Academy%20courses." target="_blank" rel="noopener">Message on WhatsApp</a></p>
+        <p style="margin-top:18px;color:var(--muted)">Email: <a href="mailto:contact@vorlendigital.com">contact@vorlendigital.com</a><br>Location: Pakistan — 100% online classes, open to students everywhere.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/volrenacademy" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/vorlenacademy" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3 style="margin-bottom:6px">Apply for Admission</h3>
+        <p style="color:var(--muted);font-size:.92rem;margin-bottom:18px">Ready to join a course? Use our online registration form — it takes about two minutes.</p>
+        <p><button class="btn btn-red btn-block" type="button" data-register="">Open Student Registration Form</button></p>
+        <div class="divider-label">or send a quick inquiry</div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="cName">Full Name <span class="req">*</span></label><input id="cName" name="name" type="text" required autocomplete="name" placeholder="Your full name"><span class="error-text" id="cNameError"></span></div>
+            <div class="field"><label for="cPhone">WhatsApp Number <span class="req">*</span></label><input id="cPhone" name="phone" type="tel" required autocomplete="tel" placeholder="03xx-xxxxxxx"><span class="error-text" id="cPhoneError"></span></div>
+          </div>
+          <div class="field"><label for="cType">Inquiry Type</label>
+            <select id="cType" name="type">
+              <option>Course Admission</option>
+              <option>Upcoming Course Feedback</option>
+              <option>Educational Services</option>
+              <option>Institutional Collaboration</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="field"><label for="cMsg">Your Message</label><textarea id="cMsg" name="message" placeholder="What would you like to know?"></textarea></div>
+          <button class="btn btn-navy btn-block" type="submit">Send Inquiry via WhatsApp</button>
+          <p class="form-note">No account needed. Your message opens in WhatsApp — nothing is stored on this website by this inquiry form.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy" style="padding-top:0">
+  <div class="container">
+    <div class="card">
+      <h3 style="margin-top:0">Privacy Notice</h3>
+      <p>When you submit a registration, course-interest, or collaboration form on this website, your details are sent to VORLEN Digital Academy's private registration system, where they are recorded in an admissions log accessible only to our admissions team, and an email notification is sent to our team. We use your information solely to respond to your inquiry or registration and to follow up about courses or collaborations, as you consent. We do not sell or share your information with third parties, and we never ask for passwords or payment card details through these forms. Quick inquiries sent through the WhatsApp inquiry form open in WhatsApp instead and are handled through WhatsApp. Registration does not guarantee admission; every registration is reviewed by our admissions team. For any privacy question, or to ask us to correct or remove your details, contact us at <a href="mailto:contact@vorlendigital.com">contact@vorlendigital.com</a> or on WhatsApp at 0371-5969140.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="vorlen-logo-transparent.png" alt="VORLEN logo" loading="lazy">
+        <div class="fname">VORLEN</div>
+        <div class="ftag">One Brand. Multiple Possibilities.</div>
+        <div class="values">People | Skills | Opportunities</div>
+        <p style="font-size:.9rem;margin-top:12px">VORLEN Digital Academy — practical, career-focused online training, taught live from Pakistan to students everywhere.</p>
+      </div>
+      <div>
+        <h4>Digital Academy</h4>
+        <a href="#courses">Courses</a>
+        <a href="#academy">Medical Billing</a>
+        <a href="#academy">AI Digital Marketing</a>
+        <a href="#feedback">Upcoming Courses</a>
+      </div>
+      <div>
+        <h4>VORLEN</h4>
+        <a href="#about">About Us</a>
+        <a href="#services">Educational Services</a>
+        <a href="#vision">Our Vision</a>
+        <a href="#collaborations">Collaborations</a>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/923715969140" target="_blank" rel="noopener">WhatsApp: 0371-5969140</a>
+        <a href="mailto:contact@vorlendigital.com">contact@vorlendigital.com</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="https://www.facebook.com/volrenacademy" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/vorlenacademy" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> VORLEN Digital Academy. All rights reserved.</span>
+      <span>Learn Today. Work Globally.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-backdrop" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+  <div class="modal">
+    <button class="modal-close" id="registerClose" aria-label="Close registration form">✕</button>
+    <div id="registerFormWrap">
+      <h3 id="registerTitle">Student Registration</h3>
+      <p class="sub">Register for a VORLEN Digital Academy course. Our admissions team will review your registration and contact you regarding the next steps.</p>
+      <div class="notice-box" id="registerInterestNote" role="note"></div>
+      <form id="registerForm" novalidate>
+        <p class="fieldset-heading">Personal Information</p>
+        <div class="field"><label for="rName">Full Name <span class="req">*</span></label><input id="rName" name="fullName" type="text" required autocomplete="name" placeholder="Your full name as per CNIC / B-Form"><span class="error-text" id="rNameError"></span></div>
+        <div class="form-row">
+          <div class="field"><label for="rGuardian">Father's / Guardian's Name</label><input id="rGuardian" name="guardianName" type="text" autocomplete="off" placeholder="Father's or guardian's name"><span class="error-text" id="rGuardianError"></span></div>
+          <div class="field"><label for="rCity">City <span class="req">*</span></label><input id="rCity" name="city" type="text" required autocomplete="address-level2" placeholder="Your city"><span class="error-text" id="rCityError"></span></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="rPhone">WhatsApp Number <span class="req">*</span></label><input id="rPhone" name="whatsapp" type="tel" required autocomplete="tel" placeholder="03xx-xxxxxxx" inputmode="tel"><span class="error-text" id="rPhoneError"></span></div>
+          <div class="field"><label for="rEmail">Email Address <span class="req">*</span></label><input id="rEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com" inputmode="email"><span class="error-text" id="rEmailError"></span></div>
+        </div>
+        <p class="fieldset-heading">Educational Information</p>
+        <div class="form-row">
+          <div class="field"><label for="rQual">Highest Qualification <span class="req">*</span></label>
+            <select id="rQual" name="qualification" required>
+              <option value="">Select your qualification</option>
+              <option>Matric</option>
+              <option>Intermediate</option>
+              <option>Bachelor's Degree</option>
+              <option>Master's Degree</option>
+              <option>MPhil / PhD</option>
+              <option>Other</option>
+            </select><span class="error-text" id="rQualError"></span>
+          </div>
+          <div class="field"><label for="rStatus">Current Status</label>
+            <select id="rStatus" name="currentStatus">
+              <option value="">Select your status (optional)</option>
+              <option>Student</option>
+              <option>Graduate</option>
+              <option>Employed</option>
+              <option>Other</option>
+            </select><span class="error-text" id="rStatusError"></span>
+          </div>
+        </div>
+        <p class="fieldset-heading">Course Information</p>
+        <div class="field"><label for="rCourse">Selected Course <span class="req">*</span></label>
+          <select id="rCourse" name="course" required>
+            <option value="">Select a course</option>
+            <option>Medical Billing &amp; Coding</option>
+            <option>AI-Powered Digital Marketing &amp; Content Creation</option>
+            <option>Medical Coding</option>
+            <option>Medical Virtual Assistant</option>
+            <option>Dental Billing</option>
+            <option>Behavioral Health Billing</option>
+            <option>Medical Credentialing</option>
+            <option>AI Automation</option>
+            <option>Prompt Engineering</option>
+            <option>AI Video &amp; Content Creation</option>
+            <option>AI Agents Development</option>
+            <option>AI Chatbots &amp; Voice Agents</option>
+            <option>No-Code AI App Building</option>
+            <option>Machine Learning Basics</option>
+            <option>Python Programming</option>
+            <option>Web Development</option>
+            <option>Data Analytics</option>
+            <option>Cybersecurity Basics</option>
+            <option>Graphic Designing</option>
+            <option>SEO</option>
+            <option>Meta &amp; Google Ads</option>
+            <option>E-Commerce Skills</option>
+          </select><span class="error-text" id="rCourseError"></span>
+        </div>
+        <div class="field"><label for="rTiming">Preferred Class Timing</label>
+          <select id="rTiming" name="preferredTiming">
+            <option value="">No preference</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Weekend</option>
+          </select>
+        </div>
+        <div class="field"><label for="rMsg">Additional Message</label><textarea id="rMsg" name="message" placeholder="Anything else you would like us to know? (optional)"></textarea></div>
+        <p class="fieldset-heading">Consent</p>
+        <label class="consent" id="rConsentAccuracyWrap"><input type="checkbox" id="rConsentAccuracy" required><span>I confirm that the information I have submitted is accurate. <span class="req" style="color:var(--red)">*</span></span></label>
+        <span class="error-text" id="rConsentAccuracyError"></span>
+        <label class="consent"><input type="checkbox" id="rConsentFollowup"><span>I agree to be contacted by VORLEN Digital Academy about this course and related follow-up communication.</span></label>
+        <p class="privacy-note">By submitting, you agree to our <a href="#privacy" id="registerPrivacyLink">privacy notice</a>. Your details are recorded in our private admissions log and emailed to our admissions team. Registration does not guarantee admission.</p>
+        <div class="hp" aria-hidden="true"><label for="rWebsite">Leave this field empty</label><input id="rWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn-red btn-block" type="submit" id="registerSubmit"><span class="spinner" aria-hidden="true"></span><span class="btn-label">Submit Registration</span></button>
+        <p class="form-note">Need help with registration? <a href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20need%20help%20with%20my%20VORLEN%20course%20registration." target="_blank" rel="noopener">Message admissions on WhatsApp</a>.</p>
+      </form>
+    </div>
+    <div class="form-result" id="registerSuccess" role="status">
+      <div class="success-icon">✓</div>
+      <h3>Registration Submitted Successfully</h3>
+      <p>Thank you for registering with VORLEN Digital Academy. We have received your information. Our admissions team will review your registration and contact you regarding the next steps.</p>
+      <dl class="result-details">
+        <div><dt>Student Name</dt><dd id="registerSuccessName">—</dd></div>
+        <div><dt>Selected Course</dt><dd id="registerSuccessCourse">—</dd></div>
+        <div><dt>Registration ID</dt><dd id="registerSuccessId">—</dd></div>
+      </dl>
+      <p style="font-size:.88rem">Please save your Registration ID for future reference. Registration does not guarantee admission.</p>
+      <div class="result-actions">
+        <a class="btn btn-outline" href="#courses" id="registerBackBtn">Back to Courses</a>
+        <a class="btn btn-green" href="https://wa.me/923715969140" target="_blank" rel="noopener" id="registerWaBtn">Contact Admissions on WhatsApp</a>
+      </div>
+    </div>
+    <div class="form-result" id="registerError" role="alert">
+      <div class="error-icon">!</div>
+      <h3>Submission Failed</h3>
+      <p>Your registration could not be sent. Please check your internet connection and try again — your details are still in the form.</p>
+      <div class="result-actions">
+        <button class="btn btn-red" type="button" id="registerRetryBtn">Try Again</button>
+        <a class="btn btn-green" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20need%20help%20with%20my%20VORLEN%20course%20registration." target="_blank" rel="noopener">Contact Admissions on WhatsApp</a>
+      </div>
+    </div>
+    <div class="form-result" id="registerSetup" role="status">
+      <div class="error-icon">!</div>
+      <h3>Online Registration Is Being Set Up</h3>
+      <p>Our online registration system is being configured. You can still register right now through WhatsApp — tap below and your details will be prefilled in the message.</p>
+      <div class="result-actions">
+        <a class="btn btn-green" href="https://wa.me/923715969140" target="_blank" rel="noopener" id="registerSetupWaBtn">Register via WhatsApp</a>
+        <button class="btn btn-outline" type="button" id="registerSetupBackBtn">Back to the Form</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTEREST MODAL -->
+<div class="modal-backdrop" id="interestModal" role="dialog" aria-modal="true" aria-labelledby="interestTitle">
+  <div class="modal narrow">
+    <button class="modal-close" id="interestClose" aria-label="Close">✕</button>
+    <div id="interestFormWrap">
+      <h3 id="interestTitle">Register Your Interest</h3>
+      <p class="sub" id="interestSub">Tell us what you want to learn. Your interest is saved in our course-interest log and emailed to our admissions team.</p>
+      <form id="interestForm" novalidate>
+        <div class="field"><label for="iName">Full Name <span class="req">*</span></label><input id="iName" type="text" required autocomplete="name" placeholder="Your full name"><span class="error-text" id="iNameError"></span></div>
+        <div class="field"><label for="iPhone">WhatsApp Number <span class="req">*</span></label><input id="iPhone" type="tel" required autocomplete="tel" placeholder="03xx-xxxxxxx" inputmode="tel"><span class="error-text" id="iPhoneError"></span></div>
+        <div class="form-row">
+          <div class="field"><label for="iEmail">Email Address (Optional)</label><input id="iEmail" type="email" autocomplete="email" placeholder="you@example.com" inputmode="email"><span class="error-text" id="iEmailError"></span></div>
+          <div class="field"><label for="iCity">City (Optional)</label><input id="iCity" type="text" placeholder="Your city"></div>
+        </div>
+        <div class="field"><label for="iCourse">Course of Interest <span class="req">*</span></label>
+          <select id="iCourse" required>
+            <option>AI Automation</option>
+            <option>Medical Virtual Assistant</option>
+            <option>Advanced Medical Coding</option>
+            <option>AI Video Creation</option>
+            <option>Python &amp; Data Analytics</option>
+            <option>Web Development</option>
+            <option>Graphic Design</option>
+            <option>Digital Marketing &amp; CRM</option>
+            <option>Medical Coding</option>
+            <option>Dental Billing</option>
+            <option>Behavioral Health Billing</option>
+            <option>Medical Credentialing</option>
+            <option>Prompt Engineering</option>
+            <option>AI Video &amp; Content Creation</option>
+            <option>AI Agents Development</option>
+            <option>AI Chatbots &amp; Voice Agents</option>
+            <option>No-Code AI App Building</option>
+            <option>Machine Learning Basics</option>
+            <option>Python Programming</option>
+            <option>Data Analytics</option>
+            <option>Cybersecurity Basics</option>
+            <option>Graphic Designing</option>
+            <option>SEO</option>
+            <option>Meta &amp; Google Ads</option>
+            <option>E-Commerce Skills</option>
+            <option value="suggest">A new course — I will suggest it below</option>
+          </select><span class="error-text" id="iCourseError"></span>
+        </div>
+        <div class="field" id="suggestField" style="display:none"><label for="iSuggest">Your Course Suggestion <span class="req">*</span></label><input id="iSuggest" type="text" placeholder="Which course should we teach?"><span class="error-text" id="iSuggestError"></span></div>
+        <div class="field"><label for="iTime">Preferred Learning Time (Optional)</label>
+          <select id="iTime"><option value="">No preference</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select>
+        </div>
+        <div class="field"><label for="iComments">Comments or Suggestions (Optional)</label><textarea id="iComments" placeholder="Anything else you would like us to know?"></textarea></div>
+        <p class="privacy-note">This is a course-interest submission, not a confirmed admission. Your details are used solely to follow up on your course interest. See our <a href="#privacy" class="privacy-modal-link">privacy notice</a>.</p>
+        <label class="consent" id="iConsentWrap"><input type="checkbox" id="iConsent" required><span>I agree to be contacted by VORLEN Digital Academy on WhatsApp about this course interest. <span style="color:var(--red)">*</span></span></label>
+        <span class="error-text" id="iConsentError"></span>
+        <div class="hp" aria-hidden="true"><label for="iWebsite">Leave this field empty</label><input id="iWebsite" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn-navy btn-block" type="submit" id="interestSubmit"><span class="spinner" aria-hidden="true"></span><span class="btn-label">Submit My Interest</span></button>
+      </form>
+    </div>
+    <div class="form-result" id="interestSuccess" role="status">
+      <div class="success-icon">✓</div>
+      <h3>Thank You — Interest Recorded</h3>
+      <p>Your course interest has been saved and sent to our admissions team. We will contact you when a batch for this course opens.</p>
+      <dl class="result-details">
+        <div><dt>Reference ID</dt><dd id="interestSuccessId">—</dd></div>
+        <div><dt>Course of Interest</dt><dd id="interestSuccessCourse">—</dd></div>
+      </dl>
+      <div class="result-actions">
+        <a class="btn btn-outline" href="#courses" id="interestBackBtn">Back to Courses</a>
+        <a class="btn btn-green" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20am%20interested%20in%20upcoming%20courses%20at%20VORLEN%20Digital%20Academy.%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Contact on WhatsApp</a>
+      </div>
+    </div>
+    <div class="form-result" id="interestError" role="alert">
+      <div class="error-icon">!</div>
+      <h3>Submission Failed</h3>
+      <p>Your interest could not be sent. Please check your internet connection and try again — your details are still in the form.</p>
+      <div class="result-actions">
+        <button class="btn btn-navy" type="button" id="interestRetryBtn">Try Again</button>
+        <a class="btn btn-green" href="https://wa.me/923715969140?text=Assalam%20o%20Alaikum%2C%20I%20am%20interested%20in%20upcoming%20courses%20at%20VORLEN%20Digital%20Academy.%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Contact on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="VORLEN ecosystem artwork, enlarged">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">✕</button>
+  <img src="vorlen-ecosystem.jpg" alt="The VORLEN brand ecosystem artwork, enlarged view">
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* =====================================================================
+     BACKEND CONFIGURATION — READ THIS BEFORE GOING LIVE
+     ---------------------------------------------------------------------
+     Paste the deployed Google Apps Script Web App URL below (see SETUP.md
+     step 3). Until a real URL is pasted here, the registration, interest
+     and collaboration forms show an honest "being set up" notice with a
+     WhatsApp fallback instead of pretending a submission worked.
+     Do NOT put any email address, API key, or secret in this file.
+     ===================================================================== */
+  var APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyJRUHu4ZHmOlfsUUBzZjYULK4avCTPbbOldRvJzGiq3-voA4aU-YX7_kQqr5tFtyQbOQ/exec";
+
+  var WA_NUMBER = "923715969140";
+  var ACTIVE_COURSES = ["Medical Billing & Coding", "AI-Powered Digital Marketing & Content Creation"];
+
+  function $(id){ return document.getElementById(id); }
+  function waLink(text){ return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text); }
+  function backendConfigured(){
+    return typeof APPS_SCRIPT_URL === "string" && APPS_SCRIPT_URL.indexOf("https://script.google.com/") === 0;
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---------- ID generation (client-side, format PREFIX-YYYYMMDD-XXXX) ---------- */
+  function genId(prefix){
+    var d = new Date();
+    var ymd = "" + d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0");
+    var chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    var rand = "";
+    var c = window.crypto || window.msCrypto;
+    if (c && c.getRandomValues) {
+      var arr = new Uint8Array(4); c.getRandomValues(arr);
+      for (var i = 0; i < 4; i++) { rand += chars[arr[i] % chars.length]; }
+    } else {
+      for (var j = 0; j < 4; j++) { rand += chars[Math.floor(Math.random() * chars.length)]; }
+    }
+    return prefix + "-" + ymd + "-" + rand;
+  }
+
+  /* ---------- Validation helpers ---------- */
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }
+  function phoneDigits(v){ return (v || "").replace(/\D/g, ""); }
+  function validPhone(v){ var d = phoneDigits(v); return d.length >= 7 && d.length <= 15; }
+  function setError(input, errorEl, msg){
+    if (input) { input.classList.add("input-error"); input.setAttribute("aria-invalid", "true"); }
+    if (errorEl) { errorEl.textContent = msg; errorEl.classList.add("show"); }
+  }
+  function clearError(input, errorEl){
+    if (input) { input.classList.remove("input-error"); input.removeAttribute("aria-invalid"); }
+    if (errorEl) { errorEl.textContent = ""; errorEl.classList.remove("show"); }
+  }
+  function bindClearOnInput(pairs){
+    pairs.forEach(function(p){
+      p[0].addEventListener("input", function(){ clearError(p[0], p[1]); });
+      p[0].addEventListener("change", function(){ clearError(p[0], p[1]); });
+    });
+  }
+  function firstInvalid(inputs){
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].classList.contains("input-error")) { inputs[i].focus({preventScroll: false}); return; }
+    }
+  }
+
+  /* ---------- Submit pipeline (Apps Script, no-cors) ---------- */
+  function submitPayload(payload){
+    return fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    });
+  }
+  function setLoading(btn, loading, busyLabel){
+    var label = btn.querySelector(".btn-label");
+    if (loading) {
+      btn.disabled = true;
+      btn.classList.add("loading");
+      if (label) { label.setAttribute("data-label", label.textContent); label.textContent = busyLabel; }
+    } else {
+      btn.disabled = false;
+      btn.classList.remove("loading");
+      if (label && label.getAttribute("data-label")) { label.textContent = label.getAttribute("data-label"); }
+    }
+  }
+
+  /* ---------- Modal manager ---------- */
+  var lastTrigger = null;
+  function openModal(backdrop, trigger){
+    lastTrigger = trigger || null;
+    backdrop.classList.add("open");
+    document.body.style.overflow = "hidden";
+    var f = backdrop.querySelector("input:not([type=checkbox]):not([tabindex='-1']), select, textarea");
+    if (f) { f.focus({preventScroll: true}); }
+  }
+  function closeModal(backdrop){
+    backdrop.classList.remove("open");
+    document.body.style.overflow = "";
+    if (lastTrigger && lastTrigger.focus) { lastTrigger.focus({preventScroll: true}); }
+    lastTrigger = null;
+  }
+  function closeAllModals(){
+    document.querySelectorAll(".modal-backdrop.open").forEach(function(m){ closeModal(m); });
+  }
+
+  /* ---------- Mobile menu ---------- */
+  var menuBtn = $("menuBtn"), mobileMenu = $("mobileMenu");
+  menuBtn.addEventListener("click", function(){
+    var open = mobileMenu.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  mobileMenu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ mobileMenu.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); });
+  });
+
+  /* ---------- Catalog filter ---------- */
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var items = document.querySelectorAll(".catalog-item");
+  filterBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      filterBtns.forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      var f = btn.getAttribute("data-filter");
+      items.forEach(function(it){
+        it.style.display = (f === "all" || it.getAttribute("data-cat") === f) ? "" : "none";
+      });
+    });
+  });
+
+  /* ---------- Registration modal ---------- */
+  var registerModal = $("registerModal"),
+      registerForm = $("registerForm"),
+      rCourse = $("rCourse"),
+      registerNote = $("registerInterestNote"),
+      registerSubmitted = false,
+      registerSubmitting = false;
+
+  function showRegisterView(view){
+    $("registerFormWrap").style.display = view === "form" ? "" : "none";
+    $("registerSuccess").classList.toggle("show", view === "success");
+    $("registerError").classList.toggle("show", view === "error");
+    $("registerSetup").classList.toggle("show", view === "setup");
+  }
+  function updateRegisterNote(){
+    var v = rCourse.value;
+    if (v && ACTIVE_COURSES.indexOf(v) === -1) {
+      registerNote.textContent = "Note: \u201C" + v + "\u201D is not currently enrolling. Your registration will be recorded, and our admissions team will contact you when a new batch opens.";
+      registerNote.classList.add("show");
+    } else {
+      registerNote.classList.remove("show");
+      registerNote.textContent = "";
+    }
+  }
+  rCourse.addEventListener("change", updateRegisterNote);
+
+  function openRegistration(course, trigger){
+    if (registerSubmitted) { registerForm.reset(); registerSubmitted = false; }
+    showRegisterView("form");
+    if (course) {
+      var found = false;
+      for (var i = 0; i < rCourse.options.length; i++) {
+        if (rCourse.options[i].text === course) { rCourse.selectedIndex = i; found = true; break; }
+      }
+      if (!found) { rCourse.value = ""; }
+    } else {
+      rCourse.value = "";
+    }
+    updateRegisterNote();
+    openModal(registerModal, trigger);
+  }
+  document.querySelectorAll("[data-register]").forEach(function(el){
+    el.addEventListener("click", function(){ openRegistration(el.getAttribute("data-register") || "", el); });
+  });
+  $("registerClose").addEventListener("click", function(){ closeModal(registerModal); });
+  registerModal.addEventListener("click", function(e){ if (e.target === registerModal) { closeModal(registerModal); } });
+  $("registerPrivacyLink").addEventListener("click", function(){ closeModal(registerModal); });
+  $("registerBackBtn").addEventListener("click", function(){ closeModal(registerModal); });
+  $("registerRetryBtn").addEventListener("click", function(){ showRegisterView("form"); });
+  $("registerSetupBackBtn").addEventListener("click", function(){ showRegisterView("form"); });
+
+  var rPairs = [
+    [$("rName"), $("rNameError")], [$("rGuardian"), $("rGuardianError")],
+    [$("rPhone"), $("rPhoneError")], [$("rEmail"), $("rEmailError")],
+    [$("rCity"), $("rCityError")], [$("rQual"), $("rQualError")],
+    [$("rStatus"), $("rStatusError")], [rCourse, $("rCourseError")]
+  ];
+  bindClearOnInput(rPairs);
+  $("rConsentAccuracy").addEventListener("change", function(){
+    clearError(null, $("rConsentAccuracyError"));
+    $("rConsentAccuracyWrap").classList.remove("input-error");
+  });
+
+  function validateRegistration(){
+    var ok = true;
+    var name = $("rName").value.trim();
+    var phone = $("rPhone").value.trim();
+    var email = $("rEmail").value.trim();
+    var city = $("rCity").value.trim();
+    var qual = $("rQual").value;
+    var course = rCourse.value;
+    if (!name) { setError($("rName"), $("rNameError"), "Please enter your full name."); ok = false; }
+    if (!phone) { setError($("rPhone"), $("rPhoneError"), "Please enter your WhatsApp number."); ok = false; }
+    else if (!validPhone(phone)) { setError($("rPhone"), $("rPhoneError"), "Please enter a valid phone number (7–15 digits)."); ok = false; }
+    if (!email) { setError($("rEmail"), $("rEmailError"), "Please enter your email address."); ok = false; }
+    else if (!validEmail(email)) { setError($("rEmail"), $("rEmailError"), "Please enter a valid email address."); ok = false; }
+    if (!city) { setError($("rCity"), $("rCityError"), "Please enter your city."); ok = false; }
+    if (!qual) { setError($("rQual"), $("rQualError"), "Please select your highest qualification."); ok = false; }
+    if (!course) { setError(rCourse, $("rCourseError"), "Please select a course."); ok = false; }
+    if (!$("rConsentAccuracy").checked) {
+      $("rConsentAccuracyWrap").classList.add("input-error");
+      setError(null, $("rConsentAccuracyError"), "Please confirm that your information is accurate.");
+      ok = false;
+    }
+    return ok;
+  }
+
+  registerForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (registerSubmitting) { return; }
+    if (!validateRegistration()) {
+      firstInvalid([$("rName"), $("rPhone"), $("rEmail"), $("rCity"), $("rQual"), rCourse]);
+      return;
+    }
+    var registrationId = genId("VOR");
+    var payload = {
+      formType: "registration",
+      registrationId: registrationId,
+      fullName: $("rName").value.trim(),
+      guardianName: $("rGuardian").value.trim(),
+      whatsapp: $("rPhone").value.trim(),
+      email: $("rEmail").value.trim(),
+      city: $("rCity").value.trim(),
+      qualification: $("rQual").value,
+      currentStatus: $("rStatus").value,
+      course: rCourse.options[rCourse.selectedIndex].text,
+      preferredTiming: $("rTiming").value,
+      message: $("rMsg").value.trim(),
+      consentAccuracy: $("rConsentAccuracy").checked,
+      consentFollowup: $("rConsentFollowup").checked,
+      website: $("rWebsite").value,
+      submittedAt: new Date().toISOString()
+    };
+    /* Honeypot: silently discard spam without revealing the filter. */
+    if (payload.website) { showRegisterSuccess(payload); return; }
+    if (!backendConfigured()) {
+      var lines = ["Assalam o Alaikum, I would like to register for a VORLEN Digital Academy course.", "",
+        "Registration ID: " + registrationId,
+        "Name: " + payload.fullName,
+        "Father's / Guardian's Name: " + (payload.guardianName || "—"),
+        "WhatsApp: " + payload.whatsapp,
+        "Email: " + payload.email,
+        "City: " + payload.city,
+        "Qualification: " + payload.qualification,
+        "Current Status: " + (payload.currentStatus || "—"),
+        "Selected Course: " + payload.course,
+        "Preferred Class Timing: " + (payload.preferredTiming || "No preference")];
+      if (payload.message) { lines.push("Message: " + payload.message); }
+      $("registerSetupWaBtn").href = waLink(lines.join("\n"));
+      showRegisterView("setup");
+      return;
+    }
+    registerSubmitting = true;
+    setLoading($("registerSubmit"), true, "Submitting…");
+    submitPayload(payload).then(function(){
+      registerSubmitting = false;
+      setLoading($("registerSubmit"), false);
+      showRegisterSuccess(payload);
+    }).catch(function(){
+      registerSubmitting = false;
+      setLoading($("registerSubmit"), false);
+      showRegisterView("error");
+    });
+  });
+  function showRegisterSuccess(payload){
+    registerSubmitted = true;
+    $("registerSuccessName").textContent = payload.fullName;
+    $("registerSuccessCourse").textContent = payload.course;
+    $("registerSuccessId").textContent = payload.registrationId;
+    $("registerWaBtn").href = waLink("Assalam o Alaikum, I have submitted my registration (ID: " + payload.registrationId + ") for " + payload.course + ". I would like to discuss the next steps.");
+    showRegisterView("success");
+  }
+
+  /* ---------- Interest modal ---------- */
+  var interestModal = $("interestModal"),
+      interestForm = $("interestForm"),
+      iCourse = $("iCourse"),
+      suggestField = $("suggestField"),
+      suggestInput = $("iSuggest"),
+      interestTitle = $("interestTitle"),
+      interestSub = $("interestSub"),
+      interestSubmitted = false,
+      interestSubmitting = false;
+
+  function showInterestView(view){
+    $("interestFormWrap").style.display = view === "form" ? "" : "none";
+    $("interestSuccess").classList.toggle("show", view === "success");
+    $("interestError").classList.toggle("show", view === "error");
+  }
+  function syncSuggest(){
+    var show = iCourse.value === "suggest";
+    suggestField.style.display = show ? "" : "none";
+    suggestInput.required = show;
+  }
+  iCourse.addEventListener("change", syncSuggest);
+  function openInterest(course, suggestMode, trigger){
+    if (interestSubmitted) { interestForm.reset(); interestSubmitted = false; }
+    showInterestView("form");
+    if (suggestMode) {
+      iCourse.value = "suggest";
+      interestTitle.textContent = "Suggest a New Course";
+      interestSub.textContent = "Tell us which course VORLEN Digital Academy should teach next.";
+    } else {
+      interestTitle.textContent = "Register Your Interest";
+      interestSub.textContent = "Tell us what you want to learn. Your interest is saved in our course-interest log and emailed to our admissions team.";
+      var found = false;
+      for (var i = 0; i < iCourse.options.length; i++) {
+        if (iCourse.options[i].text === course) { iCourse.selectedIndex = i; found = true; break; }
+      }
+      if (!found) { iCourse.value = "suggest"; suggestInput.value = course || ""; }
+    }
+    syncSuggest();
+    openModal(interestModal, trigger);
+  }
+  document.querySelectorAll("[data-interest]").forEach(function(el){
+    el.addEventListener("click", function(){ openInterest(el.getAttribute("data-interest"), false, el); });
+  });
+  $("suggestCourseBtn").addEventListener("click", function(){ openInterest("", true, this); });
+  $("interestClose").addEventListener("click", function(){ closeModal(interestModal); });
+  interestModal.addEventListener("click", function(e){ if (e.target === interestModal) { closeModal(interestModal); } });
+  interestModal.querySelectorAll(".privacy-modal-link").forEach(function(a){
+    a.addEventListener("click", function(){ closeModal(interestModal); });
+  });
+  $("interestBackBtn").addEventListener("click", function(){ closeModal(interestModal); });
+  $("interestRetryBtn").addEventListener("click", function(){ showInterestView("form"); });
+
+  var iPairs = [
+    [$("iName"), $("iNameError")], [$("iPhone"), $("iPhoneError")],
+    [$("iEmail"), $("iEmailError")], [iCourse, $("iCourseError")],
+    [suggestInput, $("iSuggestError")]
+  ];
+  bindClearOnInput(iPairs);
+  $("iConsent").addEventListener("change", function(){
+    clearError(null, $("iConsentError"));
+    $("iConsentWrap").classList.remove("input-error");
+  });
+
+  function validateInterest(){
+    var ok = true;
+    var name = $("iName").value.trim();
+    var phone = $("iPhone").value.trim();
+    var email = $("iEmail").value.trim();
+    if (!name) { setError($("iName"), $("iNameError"), "Please enter your full name."); ok = false; }
+    if (!phone) { setError($("iPhone"), $("iPhoneError"), "Please enter your WhatsApp number."); ok = false; }
+    else if (!validPhone(phone)) { setError($("iPhone"), $("iPhoneError"), "Please enter a valid phone number (7–15 digits)."); ok = false; }
+    if (email && !validEmail(email)) { setError($("iEmail"), $("iEmailError"), "Please enter a valid email address."); ok = false; }
+    if (iCourse.value === "suggest" && !suggestInput.value.trim()) {
+      setError(suggestInput, $("iSuggestError"), "Please tell us which course we should teach."); ok = false;
+    }
+    if (!$("iConsent").checked) {
+      $("iConsentWrap").classList.add("input-error");
+      setError(null, $("iConsentError"), "Please agree to be contacted about this course interest.");
+      ok = false;
+    }
+    return ok;
+  }
+
+  interestForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (interestSubmitting) { return; }
+    if (!validateInterest()) {
+      firstInvalid([$("iName"), $("iPhone"), $("iEmail"), suggestInput]);
+      return;
+    }
+    var referenceId = genId("INT");
+    var isSuggest = iCourse.value === "suggest";
+    var courseDisplay = isSuggest ? ("Suggested course: " + suggestInput.value.trim()) : iCourse.options[iCourse.selectedIndex].text;
+    var payload = {
+      formType: "interest",
+      referenceId: referenceId,
+      fullName: $("iName").value.trim(),
+      whatsapp: $("iPhone").value.trim(),
+      email: $("iEmail").value.trim(),
+      city: $("iCity").value.trim(),
+      course: courseDisplay,
+      suggestedCourse: isSuggest ? suggestInput.value.trim() : "",
+      preferredTime: $("iTime").value,
+      comments: $("iComments").value.trim(),
+      consent: $("iConsent").checked,
+      website: $("iWebsite").value,
+      submittedAt: new Date().toISOString()
+    };
+    if (payload.website) { showInterestSuccess(payload); return; }
+    if (!backendConfigured()) {
+      showSetupError($("interestError"), "Interest System Is Being Set Up",
+        "Our course-interest system is being configured. Please message us on WhatsApp about the course you want to learn, and our team will record your interest.");
+      return;
+    }
+    interestSubmitting = true;
+    setLoading($("interestSubmit"), true, "Submitting…");
+    submitPayload(payload).then(function(){
+      interestSubmitting = false;
+      setLoading($("interestSubmit"), false);
+      showInterestSuccess(payload);
+    }).catch(function(){
+      interestSubmitting = false;
+      setLoading($("interestSubmit"), false);
+      showInterestView("error");
+    });
+  });
+  function showInterestSuccess(payload){
+    interestSubmitted = true;
+    $("interestSuccessId").textContent = payload.referenceId;
+    $("interestSuccessCourse").textContent = payload.course;
+    showInterestView("success");
+  }
+  function showSetupError(errorView, heading, text){
+    var h = errorView.querySelector("h3");
+    var p = errorView.querySelector("p");
+    if (h) { h.textContent = heading; }
+    if (p) { p.textContent = text; }
+    errorView.classList.add("show");
+    var wrap = errorView.parentElement.querySelector("[id$='FormWrap']");
+    if (wrap) { wrap.style.display = "none"; }
+  }
+
+  /* ---------- Collaboration inquiry form (inline) ---------- */
+  var collabForm = $("collabInquiryForm"),
+      collabSubmitting = false;
+  var kPairs = [
+    [$("kPerson"), $("kPersonError")], [$("kOrg"), $("kOrgError")],
+    [$("kEmail"), $("kEmailError")], [$("kPhone"), $("kPhoneError")],
+    [$("kType"), $("kTypeError")], [$("kMsg"), $("kMsgError")]
+  ];
+  bindClearOnInput(kPairs);
+  function showCollabView(view){
+    $("collabFormWrap").style.display = view === "form" ? "" : "none";
+    $("collabSuccess").classList.toggle("show", view === "success");
+    $("collabError").classList.toggle("show", view === "error");
+  }
+  $("collabRetryBtn").addEventListener("click", function(){ showCollabView("form"); });
+  $("collabBackBtn").addEventListener("click", function(){
+    collabForm.reset();
+    showCollabView("form");
+  });
+  collabForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (collabSubmitting) { return; }
+    var ok = true;
+    var person = $("kPerson").value.trim();
+    var org = $("kOrg").value.trim();
+    var email = $("kEmail").value.trim();
+    var phone = $("kPhone").value.trim();
+    var type = $("kType").value;
+    var msg = $("kMsg").value.trim();
+    if (!person) { setError($("kPerson"), $("kPersonError"), "Please enter the contact person's name."); ok = false; }
+    if (!org) { setError($("kOrg"), $("kOrgError"), "Please enter the organization name."); ok = false; }
+    if (!email) { setError($("kEmail"), $("kEmailError"), "Please enter your email address."); ok = false; }
+    else if (!validEmail(email)) { setError($("kEmail"), $("kEmailError"), "Please enter a valid email address."); ok = false; }
+    if (phone && !validPhone(phone)) { setError($("kPhone"), $("kPhoneError"), "Please enter a valid phone number (7–15 digits)."); ok = false; }
+    if (!type) { setError($("kType"), $("kTypeError"), "Please select the type of collaboration."); ok = false; }
+    if (!msg) { setError($("kMsg"), $("kMsgError"), "Please write a short message about the collaboration."); ok = false; }
+    if (!ok) { firstInvalid([$("kPerson"), $("kOrg"), $("kEmail"), $("kPhone"), $("kType"), $("kMsg")]); return; }
+    var referenceId = genId("COL");
+    var payload = {
+      formType: "collaboration",
+      referenceId: referenceId,
+      contactPerson: person,
+      organization: org,
+      email: email,
+      phone: phone,
+      collabType: type,
+      message: msg,
+      website: $("kWebsite").value,
+      submittedAt: new Date().toISOString()
+    };
+    if (payload.website) { showCollabSuccess(payload); return; }
+    if (!backendConfigured()) {
+      showSetupError($("collabError"), "Inquiry System Is Being Set Up",
+        "Our collaboration inquiry system is being configured. Please message us on WhatsApp to discuss your collaboration, and our team will respond.");
+      return;
+    }
+    collabSubmitting = true;
+    setLoading($("collabSubmit"), true, "Sending…");
+    submitPayload(payload).then(function(){
+      collabSubmitting = false;
+      setLoading($("collabSubmit"), false);
+      showCollabSuccess(payload);
+    }).catch(function(){
+      collabSubmitting = false;
+      setLoading($("collabSubmit"), false);
+      showCollabView("error");
+    });
+  });
+  function showCollabSuccess(payload){
+    $("collabSuccessId").textContent = payload.referenceId;
+    $("collabSuccessOrg").textContent = payload.organization;
+    $("collabSuccessType").textContent = payload.collabType;
+    $("collabWaBtn").href = waLink("Assalam o Alaikum, I have submitted a collaboration inquiry (Reference: " + payload.referenceId + ") for " + payload.organization + ". I would like to discuss the next steps.");
+    showCollabView("success");
+    $("collabForm").scrollIntoView({behavior: "smooth", block: "start"});
+  }
+
+  /* ---------- Contact form -> WhatsApp (unchanged behaviour) ---------- */
+  var contactForm = $("contactForm");
+  bindClearOnInput([[$("cName"), $("cNameError")], [$("cPhone"), $("cPhoneError")]]);
+  contactForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var ok = true;
+    var name = $("cName").value.trim();
+    var phone = $("cPhone").value.trim();
+    if (!name) { setError($("cName"), $("cNameError"), "Please enter your full name."); ok = false; }
+    if (!phone) { setError($("cPhone"), $("cPhoneError"), "Please enter your WhatsApp number."); ok = false; }
+    else if (!validPhone(phone)) { setError($("cPhone"), $("cPhoneError"), "Please enter a valid phone number (7–15 digits)."); ok = false; }
+    if (!ok) { return; }
+    var lines = ["Assalam o Alaikum, I would like to know more about VORLEN Digital Academy.",
+      "", "Inquiry Type: " + $("cType").value,
+      "Name: " + name,
+      "WhatsApp: " + phone];
+    var msg = $("cMsg").value.trim();
+    if (msg) { lines.push("Message: " + msg); }
+    window.open(waLink(lines.join("\n")), "_blank", "noopener");
+  });
+
+  /* ---------- Lightbox ---------- */
+  var lightbox = $("lightbox");
+  $("ecosystemImg").addEventListener("click", function(){
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+  function closeLightbox(){ lightbox.classList.remove("open"); document.body.style.overflow = ""; }
+  $("lightboxClose").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", function(e){ if (e.target === lightbox) { closeLightbox(); } });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") { closeLightbox(); closeAllModals(); }
+  });
+})();
+</script>
+</body>
+</html>
