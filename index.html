@@ -1032,6 +1032,11 @@ footer a:hover{color:#fff}
       p[0].addEventListener("change", function(){ clearError(p[0], p[1]); });
     });
   }
+  function clearFormErrors(pairs, consentErrorEl, consentWrap){
+    pairs.forEach(function(p){ clearError(p[0], p[1]); });
+    if (consentErrorEl) { clearError(null, consentErrorEl); }
+    if (consentWrap) { consentWrap.classList.remove("input-error"); }
+  }
   function firstInvalid(inputs){
     for (var i = 0; i < inputs.length; i++) {
       if (inputs[i].classList.contains("input-error")) { inputs[i].focus({preventScroll: false}); return; }
@@ -1131,6 +1136,7 @@ footer a:hover{color:#fff}
 
   function openRegistration(course, trigger){
     if (registerSubmitted) { registerForm.reset(); registerSubmitted = false; }
+    clearFormErrors(rPairs, $("rConsentAccuracyError"), $("rConsentAccuracyWrap"));
     showRegisterView("form");
     if (course) {
       var found = false;
@@ -1167,6 +1173,7 @@ footer a:hover{color:#fff}
   });
 
   function validateRegistration(){
+    clearFormErrors(rPairs, $("rConsentAccuracyError"), $("rConsentAccuracyWrap"));
     var ok = true;
     var name = $("rName").value.trim();
     var phone = $("rPhone").value.trim();
@@ -1280,6 +1287,7 @@ footer a:hover{color:#fff}
   iCourse.addEventListener("change", syncSuggest);
   function openInterest(course, suggestMode, trigger){
     if (interestSubmitted) { interestForm.reset(); interestSubmitted = false; }
+    clearFormErrors(iPairs, $("iConsentError"), $("iConsentWrap"));
     showInterestView("form");
     if (suggestMode) {
       iCourse.value = "suggest";
@@ -1321,6 +1329,7 @@ footer a:hover{color:#fff}
   });
 
   function validateInterest(){
+    clearFormErrors(iPairs, $("iConsentError"), $("iConsentWrap"));
     var ok = true;
     var name = $("iName").value.trim();
     var phone = $("iPhone").value.trim();
@@ -1421,6 +1430,7 @@ footer a:hover{color:#fff}
   collabForm.addEventListener("submit", function(e){
     e.preventDefault();
     if (collabSubmitting) { return; }
+    clearFormErrors(kPairs, null, null);
     var ok = true;
     var person = $("kPerson").value.trim();
     var org = $("kOrg").value.trim();
@@ -1481,6 +1491,8 @@ footer a:hover{color:#fff}
   bindClearOnInput([[$("cName"), $("cNameError")], [$("cPhone"), $("cPhoneError")]]);
   contactForm.addEventListener("submit", function(e){
     e.preventDefault();
+    clearError($("cName"), $("cNameError"));
+    clearError($("cPhone"), $("cPhoneError"));
     var ok = true;
     var name = $("cName").value.trim();
     var phone = $("cPhone").value.trim();
