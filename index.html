@@ -118,6 +118,15 @@ nav.main-nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:
 .team-role{color:var(--red);font-weight:600;font-size:.9rem;margin:0 0 10px}
 .team-card p{color:var(--muted);font-size:.92rem}
 .team-tag{display:inline-block;margin-top:14px;padding:5px 12px;border-radius:999px;background:var(--gray-tint);color:var(--navy);font-size:.82rem;font-weight:600}
+.video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px}
+.video-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.video-card video{display:block;width:100%;aspect-ratio:9/16;background:#000}
+.video-cap{padding:16px 18px}
+.video-cap h4{margin:0 0 6px;font-size:1.05rem}
+.video-cap p{color:var(--muted);font-size:.9rem;margin:0}
+.video-len{color:var(--navy);font-weight:600;white-space:nowrap}
+@media(max-width:980px){.video-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.video-grid{grid-template-columns:1fr}}
 @media(max-width:980px){.team-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.team-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.ceo-card{flex-direction:column;text-align:center;gap:16px;padding:28px 22px}}
@@ -295,6 +304,7 @@ footer a:hover{color:#fff}
       <a href="#academy">Digital Academy</a>
       <a href="#courses">Courses</a>
       <a href="#team">Our Team</a>
+      <a href="#videos">Class Videos</a>
       <a href="#services">Educational Services</a>
       <a href="#collaborations">Collaborations</a>
       <a href="#billing">Billing Services</a>
@@ -313,6 +323,7 @@ footer a:hover{color:#fff}
     <a href="#academy">Digital Academy</a>
     <a href="#courses">Courses</a>
     <a href="#team">Our Team</a>
+    <a href="#videos">Class Videos</a>
     <a href="#services">Educational Services</a>
     <a href="#collaborations">Collaborations</a>
     <a href="#billing">Billing Services</a>
@@ -515,6 +526,36 @@ footer a:hover{color:#fff}
       <h3 style="margin-top:0">Practical work in the AI Digital Marketing course</h3>
       <p>Students practise across social media content, marketing campaign design, lead generation, WhatsApp Business, CRM, and reporting and analysis — building a portfolio of real deliverables as they learn. Tools and platforms are introduced during live sessions; this website does not host a student dashboard or LMS.</p>
     </div>
+  </div>
+</section>
+
+<!-- 4A. CLASS VIDEOS -->
+<section class="section-light" id="videos">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Inside Our Live Classes</span>
+      <h2 class="section-title">Real Moments From a Real Class</h2>
+      <p class="section-sub">Short clips from a live VORLEN class &mdash; English communication for medical billing, taught by Farhan Saeed Qazi, TEFL-Certified Trainer.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata" playsinline src="class-clip-denied-vs-pending.mp4"></video>
+        <div class="video-cap"><h4>Denied vs Pending</h4><p>What &ldquo;denied&rdquo; and &ldquo;pending&rdquo; really mean when you speak to a US insurance company. <span class="video-len">58 seconds</span></p></div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" playsinline src="class-clip-trainer-intro.mp4"></video>
+        <div class="video-cap"><h4>Meet the Trainer</h4><p>Farhan Saeed Qazi introduces English communication for medical billing. <span class="video-len">31 seconds</span></p></div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" playsinline src="class-clip-clear-precise.mp4"></video>
+        <div class="video-cap"><h4>Clear and Precise</h4><p>Why billing conversations need clear, precise language &mdash; not general conversation. <span class="video-len">39 seconds</span></p></div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata" playsinline src="class-clip-denial-question.mp4"></video>
+        <div class="video-cap"><h4>Asking About a Denial</h4><p>The exact question to ask when following up on a denied claim. <span class="video-len">31 seconds</span></p></div>
+      </div>
+    </div>
+    <p class="fine-note">Clips are from a live guest session for Medical Billing &amp; Coding students. Student names are hidden to protect privacy.</p>
   </div>
 </section>
 
