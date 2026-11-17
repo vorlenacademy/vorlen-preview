@@ -65,13 +65,13 @@ section{padding:76px 0}
 .badge-dev{background:var(--navy-tint);color:var(--navy)}
 /* Header: navy navigation */
 header{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:3px solid var(--red)}
-.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:4px 16px;min-height:70px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
 .brand:hover{text-decoration:none}
 .brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
 .brand-name{font-weight:800;font-size:1.22rem;color:#fff;letter-spacing:.05em;line-height:1}
 .brand-tag{font-size:.64rem;letter-spacing:.22em;color:var(--navy-soft);font-weight:600;text-transform:uppercase}
-nav.main-nav{display:flex;gap:2px}
+nav.main-nav{display:flex;gap:2px;order:3;flex:1 1 100%;justify-content:center;flex-wrap:wrap}
 nav.main-nav a{color:rgba(255,255,255,.88);font-weight:500;font-size:.9rem;padding:8px 10px;border-radius:6px;white-space:nowrap}
 nav.main-nav a:hover{background:rgba(255,255,255,.1);color:#fff;text-decoration:none}
 .nav-actions{display:flex;gap:10px;align-items:center;flex:none}
