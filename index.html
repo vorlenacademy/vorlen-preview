@@ -301,6 +301,85 @@ footer a:hover{color:#fff}
   .nav-actions .btn-sm{padding:9px 13px;font-size:.85rem}
 }
 </style>
+<style>
+/* ===== UI/UX improvement pass — preview only (18 Nov 2026) =====
+   Overrides only. No markup, text, links, IDs, forms or endpoints changed.
+   Palette unchanged: only existing VORLEN variables are used. */
+
+/* --- Readability: balanced headings, safe wrapping of long strings --- */
+h1,h2,h3,h4{text-wrap:balance}
+body{overflow-wrap:break-word}
+
+/* --- Keyboard focus: clearly visible on every interactive element --- */
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+/* --- Buttons: consistent 48px standard / 44px small targets, press feedback --- */
+.btn{min-height:48px}
+.btn-sm{min-height:44px;padding:11px 18px}
+.btn:active{transform:translateY(1px)}
+/* White text on the mid green was 4.4:1; the existing darker green shade reaches 5.8:1 (AA). */
+.btn-green{background:var(--green-dark)}
+.btn-green:hover{background:var(--green-dark);filter:brightness(.92)}
+
+/* --- Header / navigation: 44px tap targets --- */
+nav.main-nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 12px}
+.social-icons a{display:inline-flex;align-items:center;min-height:44px;padding:10px 14px}
+.menu-btn{min-width:44px;min-height:44px;padding:10px 12px;line-height:1}
+.mobile-menu a{padding:13px 8px}
+
+/* --- Cards: equal heights, CTAs aligned to the bottom of each card --- */
+.card{display:flex;flex-direction:column}
+.card p:last-child:has(>a.btn),.card p:last-child:has(>button.btn){margin-top:auto !important;padding-top:18px}
+.team-card{display:flex;flex-direction:column}
+.team-card .team-tag{margin-top:auto;padding-top:14px}
+
+/* --- Forms: 48px inputs, hover affordance, larger consent checkbox --- */
+.field{margin-bottom:16px}
+label{margin-bottom:8px}
+input:not([type="checkbox"]),select,textarea{padding:13px 14px;min-height:48px}
+input:not([type="checkbox"]):hover,select:hover,textarea:hover{border-color:var(--navy-soft)}
+.consent input{width:22px;height:22px;min-height:0;padding:0}
+.hp input{min-height:0;padding:0}
+.form-row{gap:16px}
+
+/* --- Filter buttons + contact social row: 44px targets --- */
+.filter-btn{min-height:44px;padding:11px 20px}
+.social-row a{min-height:44px;align-items:center}
+
+/* --- FAQ: hover affordance on questions --- */
+.faq-list summary:hover{background:var(--offwhite)}
+
+/* --- Modal / lightbox: 44px close targets --- */
+.modal-close{width:44px;height:44px}
+.lightbox-close{width:44px;height:44px}
+
+/* --- Floating WhatsApp button: AA contrast + 48px target --- */
+.wa-float{background:var(--green-dark);min-height:48px}
+.wa-float:hover{background:var(--green-dark);filter:brightness(.92)}
+
+/* --- Footer + result details: larger tap rows, no overflow on narrow screens --- */
+footer a{padding:8px 0}
+.result-details div{flex-wrap:wrap;row-gap:2px}
+.result-details dd{overflow-wrap:anywhere}
+
+/* --- Responsive polish --- */
+@media (max-width:980px){
+  .nav-actions .btn-sm{min-height:44px}
+}
+@media (max-width:600px){
+  .nav-actions .btn-sm{padding:10px 14px;font-size:.88rem;min-height:44px}
+  .hero-panel{padding:24px}
+  .form-card{padding:24px 20px}
+  .card{padding:24px 22px}
+  .team-card{padding:24px 20px}
+  .course-top{padding:22px 22px 0}
+  .topic-list{padding:16px 22px}
+  .course-foot{padding:18px 22px 22px}
+  footer a{padding:12px 0}
+  .wa-float{padding:12px 16px;font-size:.92rem}
+  .modal-close{top:12px;right:12px}
+}
+</style>
 </head>
 <body>
 
